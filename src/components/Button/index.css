@@ -1,0 +1,33 @@
+.btn{
+    display: inline-block;
+    background-color: white;
+    text-decoration: none;
+    width: 160px;
+    border: 1px solid black;
+    height: 42px;
+    position: relative;
+    overflow: hidden;
+}
+.btn.test-completed::after,
+.btn.test-completed::before
+{
+    content: 'test';
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    line-height: 2.5;
+    transition: all 200ms;
+    bottom: 0;
+ }
+.btn.test-completed:hover::after{
+   bottom: -36px;
+ }
+ .btn.test-completed::before{
+    content: 'completed';
+    bottom: 36px;
+    text-align: center;
+ }
+ .btn.test-completed:hover::before{
+    bottom: 0;
+  }
